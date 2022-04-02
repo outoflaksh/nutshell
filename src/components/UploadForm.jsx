@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Summary from "./Summary";
 import Loading from "./Loading";
+import {
+  UploadButton,
+} from "../components/styles/Main.styled";
 
-const UploadForm = () => {
+const UploadForm = ({ display, setDisplay }) => {
   const [file, setFile] = useState('');
   const [filename, setFilename] = useState('choose file');
   const [loading, setLoading] = useState(false);
@@ -31,6 +34,14 @@ const UploadForm = () => {
 
     }
   }
+  useEffect(() => {
+    if (summary) {
+      setDisplay("summary");
+    }
+    else {
+      setDisplay("main");
+    }
+  }, [summary]);
   return (
     <>
       {
@@ -42,12 +53,9 @@ const UploadForm = () => {
           <Summary summary={summary} />
           :
           <form
-            // action="http://localhost:8000/upload"
-            // method="POST"
-            // encType="multipart/form-data"
             onSubmit={handleSubmit}
           >
-            <input type="file" id="vid_file" name="vid_file" onChange={handleChange} />
+            <input type="file" id="vid_file" name="vid_file" onChange={handleChange}/>
             <label htmlFor="vid_file">{filename}</label>
             <input type="submit" value="Upload" />
           </form>
