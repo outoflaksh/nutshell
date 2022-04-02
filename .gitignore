@@ -4,9 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
+venv
 
 # testing
 /coverage
+test-vid.mp4
+result.wav
+result.mp3
 
 # production
 /build
