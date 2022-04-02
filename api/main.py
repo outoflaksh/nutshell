@@ -69,5 +69,3 @@ def summarise_video(filepath: str):
 
   print("Complete.")
   return summary
-
-summarise_video("test-vid.mp4")
