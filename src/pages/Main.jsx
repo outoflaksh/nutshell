@@ -1,4 +1,5 @@
 import { Page } from "../components/styles/Common.styled";
+import UploadForm from "../components/UploadForm";
 import {
   MainContent,
   Heading,
@@ -16,6 +17,7 @@ const Main = () => {
         </Heading>
         <Illustration src="./illustration-upload.png" />
         <UploadButton>Upload your recorded video lecture</UploadButton>
+        <UploadForm />
         <Waves src="./waves.svg" />
       </MainContent>
     </Page>
