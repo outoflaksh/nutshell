@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Main from "./components/Main";
+import Main from "./components/pages/Main";
+import Navbar from "./components/Navbar";
 import GlobalStyles from "./components/styles/Global";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <GlobalStyles />
       <BrowserRouter>
+        <Navbar />
         <Routes>
           <Route path="app" element={<Main />} />
         </Routes>
