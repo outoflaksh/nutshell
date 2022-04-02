@@ -12,7 +12,22 @@ const GlobalStyles = createGlobalStyle`
     body {
         width: 100%;
         min-height: 100vh;
+
         font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+
+        background-color: #0B314D;
+        color: #DAECFF;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    input, button {
+        font: inherit;
+        color: inherit;
     }
 `;
 
