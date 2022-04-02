@@ -58,12 +58,16 @@ async def transcribe_audio(filepath: str):
   return (response["results"]["channels"][0]["alternatives"][0]["transcript"])
 
 def summarise_video(filepath: str):
+  print("Extracting audio from the video file...")
   conv_vid_to_audio(filepath, "extracted.mp3")
 
+  print("Conversion complete. Transcribing audio...")
   transcript = asyncio.run(transcribe_audio("extracted.mp3"))
 
+  print("Transcribe complete. Summarising...")
   summary = summarize(transcript, ratio=0.1)
 
+  print("Complete.")
   return summary
 
 summarise_video("test-vid.mp4")
