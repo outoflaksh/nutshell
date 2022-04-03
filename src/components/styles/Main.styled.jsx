@@ -24,7 +24,7 @@ export const Illustration = styled.img`
   width: auto;
 `;
 
-export const UploadButton = styled.button`
+export const UploadButton = styled.input`
   background-color: #415f7e;
   padding: 15px 30px;
   border: 3px dashed #70d2d7;

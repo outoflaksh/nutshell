@@ -10,22 +10,19 @@ import {
 import { useState } from "react";
 
 const Main = () => {
-  const [display, setDisplay] = useState('main');//optn: main/summary
+  const [display, setDisplay] = useState("main"); //optn: main/summary
 
   return (
     <Page>
       <MainContent>
-        {
-          display == "main" ?
-            <>
-              <Heading>
-                Summarise your recorded online classes in a few minutes.
-              </Heading>
-              <Illustration src="./illustration-upload.png" />
-              <UploadButton>Upload your recorded video lecture</UploadButton>
-            </> :undefined
-            
-        }
+        {display == "main" ? (
+          <>
+            <Heading>
+              Summarise your recorded online classes in a few minutes.
+            </Heading>
+            <Illustration src="./illustration-upload.png" />
+          </>
+        ) : undefined}
         <UploadForm display={display} setDisplay={setDisplay} />
         <Waves src="./waves.svg" />
       </MainContent>
