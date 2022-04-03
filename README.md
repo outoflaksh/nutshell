@@ -90,7 +90,7 @@ Nutshell leverages state-of-the-art, open-source machine learning & deep learnin
 1. Get your Deepgram API Key at [https://deepgram.com](https://deepgram.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone https://github.com/outoflaksh/nutshell.git
    ```
 3. Install NPM packages
    ```sh
