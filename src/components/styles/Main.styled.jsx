@@ -40,3 +40,12 @@ export const Waves = styled.img`
   bottom: 0%;
   pointer-events: none;
 `;
+
+export const Paragraph = styled.p`
+  width: 60%;
+  text-align: left;
+  font-size: 1.1rem;
+  & > * {
+    margin: 10px 0;
+  }
+`;
