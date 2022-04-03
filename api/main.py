@@ -1,8 +1,8 @@
 import moviepy.editor as mp
 from deepgram import Deepgram
-import asyncio
+import asyncio, os
 from gensim.summarization.summarizer import summarize
-from pydub import AudioSegment
+from settings import DEEPGRAM_API_KEY
 
 def conv_vid_to_audio(vidpath: str, audiopath: str):
   # extract the audio from the uploaded video
@@ -15,7 +15,6 @@ def conv_vid_to_audio(vidpath: str, audiopath: str):
 
 async def transcribe_audio(filepath: str):
   # transcribe the obtained audio with deepgram
-  DEEPGRAM_API_KEY = 'f6a82cadceb521a5cedf0cefb18629efe4e58097'
 
   FILE = filepath
 
