@@ -42,7 +42,11 @@ const UploadForm = ({ display, setDisplay }) => {
       {loading ? <Loading></Loading> : undefined}
 
       {summary ? (
-        <Summary summary={summary} />
+        <Summary
+          summary={summary}
+          setDisplay={setDisplay}
+          setSummary={setSummary}
+        />
       ) : (
         <form onSubmit={handleSubmit}>
           <input
